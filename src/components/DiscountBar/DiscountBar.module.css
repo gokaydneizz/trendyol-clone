@@ -1,0 +1,11 @@
+.discount-bar {
+  background: linear-gradient(
+    to right,
+    rgb(255, 0, 80) 30%,
+    rgb(255, 0, 80) 70%
+  );
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}

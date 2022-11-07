@@ -1,0 +1,25 @@
+.categories-container {
+  overflow: hidden;
+}
+
+.categories-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-top: 15px;
+  color: rgb(87, 83, 83);
+  font-size: 15px;
+  overflow: hidden;
+}
+
+.categories-list li:hover {
+  color: orange;
+  border-bottom: 2px solid orange;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.category-item {
+  padding-bottom: 5px;
+  border-bottom: 2px solid orange;
+}

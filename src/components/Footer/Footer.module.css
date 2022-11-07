@@ -1,0 +1,69 @@
+footer {
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.lists ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lists ul li h1 {
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+.lists ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.payments {
+  display: flex;
+  flex-direction: row !important;
+  padding-top: 30px;
+}
+
+.payments img {
+  max-width: 50px;
+}
+
+.socials img {
+  max-width: 150px;
+}
+
+.socials {
+  gap: 5px !important;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.country button {
+  background-color: black;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px;
+  width: 120px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.country img {
+  width: 120px;
+}
