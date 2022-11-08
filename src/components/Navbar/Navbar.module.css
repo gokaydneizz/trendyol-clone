@@ -3,19 +3,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1.5rem;
 }
 
 .cartLength {
+  position: relative;
+  top: 1px;
   border: 1px solid orange;
-  padding: 10px 15px;
+  padding: 1px 6px;
   border-radius: 50%;
   background-color: orange;
   color: #fff;
 }
 
 .imgBox {
-  max-width: 11%;
+  max-width: 13%;
   padding-top: 3px;
+  cursor: pointer;
 }
 
 .imgBox img {

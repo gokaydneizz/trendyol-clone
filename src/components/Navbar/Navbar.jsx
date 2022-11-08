@@ -15,6 +15,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.imgBox}>
         <img
+          onClick={() => navigate("/")}
           src="https://cdn.dsmcdn.com/web/logo/ty-web.svg"
           className="brand"
         />

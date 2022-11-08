@@ -8,7 +8,7 @@ import styles from "./Home.module.css";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <DiscountBar />
       <div className="container">
         <Navbar />
@@ -16,7 +16,7 @@ const Home = () => {
         <Products />
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
