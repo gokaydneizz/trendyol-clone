@@ -3,8 +3,14 @@ import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const cart = useSelector((state) => state.cart);
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.imgBox}>
@@ -29,12 +35,13 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faHeart} className={styles["list-icon"]} />{" "}
           Favorilerim
         </li>
-        <li>
+        <li onClick={() => navigate("/cart")}>
           <FontAwesomeIcon
             icon={faCartShopping}
             className={styles["list-icon"]}
           />{" "}
           Sepetim
+          <span className={styles.cartLength}>{cart.length}</span>
         </li>
       </ul>
     </nav>

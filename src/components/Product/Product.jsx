@@ -3,8 +3,12 @@ import styles from "./Product.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cart";
 
 const Product = ({ data }) => {
+  const dispatch = useDispatch();
+
   const { img, description, price, seller } = data;
   return (
     <div className={styles["product-card-container"]}>
@@ -20,7 +24,10 @@ const Product = ({ data }) => {
           <span className={styles["seller"]}>{seller}</span> {description}
         </p>
         <span className={styles.price}>{price} TL</span>
-        <button className={styles["card-btn"]}>
+        <button
+          className={styles["card-btn"]}
+          onClick={() => dispatch(addToCart(data))}
+        >
           Sepete Ekle{" "}
           <FontAwesomeIcon className={styles["card-icon"]} icon={faCartPlus} />
         </button>

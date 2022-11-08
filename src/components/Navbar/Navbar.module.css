@@ -5,6 +5,14 @@
   align-items: center;
 }
 
+.cartLength {
+  border: 1px solid orange;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: orange;
+  color: #fff;
+}
+
 .imgBox {
   max-width: 11%;
   padding-top: 3px;
