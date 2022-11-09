@@ -6,14 +6,22 @@
   padding-top: 1.5rem;
 }
 
-.cartLength {
-  position: relative;
-  top: 1px;
-  border: 1px solid orange;
-  padding: 1px 6px;
+.cart-length-container {
+  display: flex;
+  margin-top: 3px;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding-bottom: 2px;
+  padding-top: 1px;
   border-radius: 50%;
   background-color: orange;
+}
+
+.cartLength {
   color: #fff;
+  font-size: 15px;
 }
 
 .imgBox {

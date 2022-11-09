@@ -1,0 +1,111 @@
+.cart-item-container {
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 /5%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.sellerDiv {
+  display: flex;
+  gap: 5px;
+  padding: 20px;
+  align-items: center;
+}
+
+.checkbox {
+  accent-color: orange;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 1.1px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.sellerText {
+  font-size: 14px;
+  color: #999999;
+}
+
+.seller {
+  font-size: 14px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.arrowIcon {
+  height: 12px;
+}
+
+/* KARGO */
+
+.shipment {
+  text-align: center;
+  border: 1px solid green;
+  margin-top: 20px;
+  border: 1px solid #e6e6e6;
+  background-color: #ebfff4;
+  padding: 10px;
+}
+
+/* Product */
+
+.product {
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+}
+
+.product-details {
+  display: flex;
+  align-items: center;
+}
+
+.product-details img {
+  max-width: 42px;
+  height: 62px;
+  cursor: pointer;
+  border: 1px solid #e2e2e2;
+  margin: 0 10px;
+}
+
+.product-name {
+  font-size: 14px;
+  font-size: light;
+}
+
+.brand {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.amount {
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-top: solid 1px #e6e6e6;
+  border-bottom: solid 1px #e6e6e6;
+  text-align: center;
+}
+
+.counter {
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border: 1px solid #e6e6e6;
+
+  background-color: #fafafa;
+}

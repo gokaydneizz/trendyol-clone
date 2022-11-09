@@ -8,7 +8,7 @@ import CartItem from "../../components/CartItem/CartItem";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
+
   return (
     <>
       <DiscountBar />
@@ -19,7 +19,7 @@ const Cart = () => {
         </h1>
         <div className={styles["carts-container"]}>
           {cart.map((cartItem) => (
-            <CartItem item={cartItem} />
+            <CartItem key={cartItem.id} item={cartItem} />
           ))}
         </div>
       </div>

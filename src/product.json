@@ -5,7 +5,8 @@
     "seller": "Vans",
     "description": "Kaykay Ayakkabısı",
     "price": 400,
-    "favourite": false
+    "favourite": false,
+    "brand": "Vans"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "seller": "Trendyol",
     "description": "İçi yünlü mont",
     "price": 900,
-    "favourite": false
+    "favourite": false,
+    "brand": "Adidas"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "seller": "OXXO",
     "description": "Düğmeli hırka",
     "price": 200,
-    "favourite": false
+    "favourite": false,
+    "brand": "Çağan Butik"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "seller": "addax",
     "description": "Gökkuşağı renkli düğmeli hırka",
     "price": 300,
-    "favourite": false
+    "favourite": false,
+    "brand": "Çağan Butik"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "seller": "Apple",
     "description": "Apple Macbook Pro M1 İşlemcili",
     "price": 20000,
-    "favourite": false
+    "favourite": false,
+    "brand": "Apple"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "seller": "Monster",
     "description": "Monster Notebook 1050 Ti",
     "price": 15000,
-    "favourite": false
+    "favourite": false,
+    "brand": "Monster"
   },
   {
     "id": 7,
@@ -53,14 +59,16 @@
     "seller": "Fakir",
     "description": "Dikey Kablolu Süpürge",
     "price": 1200,
-    "favourite": false
+    "favourite": false,
+    "brand": "Fakir"
   },
   {
     "id": 8,
     "img": "https://www.saglamlisans.com/wp-content/uploads/2020/02/windows-10-pro.jpg",
-    "seller": "Microsofy",
+    "seller": "Oscar Computer",
     "description": "Windows 10 Pro Lisans Key",
     "price": 2000,
-    "favourite": false
+    "favourite": false,
+    "brand": "Microsoft"
   }
 ]

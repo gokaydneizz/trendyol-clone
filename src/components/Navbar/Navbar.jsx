@@ -42,7 +42,9 @@ const Navbar = () => {
             className={styles["list-icon"]}
           />{" "}
           Sepetim
-          <span className={styles.cartLength}>{cart.length}</span>
+          <div className={styles["cart-length-container"]}>
+            <span className={styles.cartLength}>{cart.length}</span>
+          </div>
         </li>
       </ul>
     </nav>

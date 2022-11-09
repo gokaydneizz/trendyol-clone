@@ -17,6 +17,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgb(119, 117, 117);
+  cursor: pointer;
 }
 
 .favourite:hover .favourite-icon {
