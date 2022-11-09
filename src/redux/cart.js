@@ -17,9 +17,22 @@ export const cartSlice = createSlice({
         state.push(tempVar);
       }
     },
+    decreaseAmount: (state, action) => {
+      const exist = state.findIndex(
+        (product) => product.id === action.payload.id
+      );
+      if (state[exist].amount > 1) {
+        state[exist].amount -= 1;
+      } else {
+        return;
+      }
+    },
+    removeFromCart: (state, action) => {
+      return state.filter((product) => product.id !== action.payload.id);
+    },
   },
 });
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, decreaseAmount, removeFromCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

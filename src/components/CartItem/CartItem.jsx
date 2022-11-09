@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./CartItem.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faCube } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
+import { useDispatch } from "react-redux";
+import { addToCart, decreaseAmount, removeFromCart } from "../../redux/cart";
 
 const CartItem = ({ item }) => {
-  console.log(item);
   const { img, brand, amount, description, seller, price } = item;
+  const itemPrice = price * item.amount;
+  console.log(item);
+  const dispatch = useDispatch();
   return (
     <div className={styles["cart-item-container"]}>
       <div className={styles.sellerDiv}>
@@ -32,9 +37,32 @@ const CartItem = ({ item }) => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <button className={styles.counter}>+</button>
-          <input min="1" max="9" type="number" className={styles.amount} />
-          <button className={styles.counter}>-</button>
+          <button
+            className={styles.counter}
+            onClick={() => dispatch(addToCart(item))}
+          >
+            +
+          </button>
+          <input
+            min="1"
+            value={item.amount}
+            max="9"
+            type="number"
+            className={styles.amount}
+          />
+          <button
+            onClick={() => dispatch(decreaseAmount(item))}
+            className={styles.counter}
+          >
+            -
+          </button>
+          <div className={styles.price}>{itemPrice}TL</div>
+          <div
+            className={styles.trash}
+            onClick={() => dispatch(removeFromCart(item))}
+          >
+            <FontAwesomeIcon icon={faTrashCan} />
+          </div>
         </div>
       </div>
     </div>

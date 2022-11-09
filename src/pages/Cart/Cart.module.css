@@ -1,6 +1,93 @@
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.cart-page-container {
+  display: grid;
+  grid-template-columns: 3.5fr 0.5fr;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-top: 15px;
+  gap: 2rem;
+}
+
 .carts-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   padding-top: 40px;
+}
+
+/* TOTAL AMOUNT */
+
+.approve-btn {
+  width: 100%;
+  padding: 14px 5px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #f27a1a;
+  font-weight: 600;
+  margin-top: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.approve-btn:hover {
+  opacity: 0.9;
+}
+
+.order-details {
+  border-radius: 6px;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 5%);
+  border: solid 1px #e6e6e6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-details h1 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: 0.8rem;
+}
+
+.sum-of-products {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.sum-of-products span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.all-calculated {
+  text-align: right;
+  border-top: 1px solid #e6e6e6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: orangered;
+  padding-top: 15px;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.location {
+  margin-top: 2rem;
+}
+
+.discountBtn {
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 5%);
+  border: solid 1px #e6e6e6;
+  padding: 10px 0;
+  font-weight: 600;
+  background-color: #fff;
 }

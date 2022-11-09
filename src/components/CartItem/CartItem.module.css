@@ -51,6 +51,8 @@ input::-webkit-inner-spin-button {
   border: 1px solid #e6e6e6;
   background-color: #ebfff4;
   padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 /* Product */
@@ -106,6 +108,16 @@ input::-webkit-inner-spin-button {
   outline: none;
   border: none;
   border: 1px solid #e6e6e6;
-
   background-color: #fafafa;
+}
+
+.price {
+  margin-left: 5rem;
+  font-size: 20px;
+  color: orangered;
+}
+
+.trash {
+  margin-left: 4rem;
+  cursor: pointer;
 }
