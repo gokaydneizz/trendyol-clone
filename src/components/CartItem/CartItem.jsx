@@ -1,15 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./CartItem.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faCube } from "@fortawesome/free-solid-svg-icons";
 import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { useDispatch } from "react-redux";
-import { addToCart, decreaseAmount, removeFromCart } from "../../redux/cart";
+import {
+  addToCart,
+  decreaseAmount,
+  removeFromCart,
+  increaseByAmount,
+} from "../../redux/cart";
 
 const CartItem = ({ item }) => {
-  const { img, brand, amount, description, seller, price } = item;
+  let { img, brand, description, seller, price } = item;
   const itemPrice = price * item.amount;
-  console.log(item);
+  const [productAmount, setProductAmount] = useState(item.amount);
+
+  useEffect(() => {
+    dispatch(
+      increaseByAmount({
+        product: item,
+        amount: productAmount,
+      })
+    );
+
+    if (!productAmount) {
+      setProductAmount("");
+    }
+  }, [productAmount]);
+
+  useEffect(() => {
+    setProductAmount(item.amount);
+  }, [item.amount]);
+
   const dispatch = useDispatch();
   return (
     <div className={styles["cart-item-container"]}>
@@ -38,25 +61,34 @@ const CartItem = ({ item }) => {
         </div>
         <div className={styles.buttons}>
           <button
+            disabled={item.amount >= 10}
             className={styles.counter}
-            onClick={() => dispatch(addToCart(item))}
+            onClick={() => {
+              dispatch(addToCart(item));
+            }}
           >
             +
           </button>
           <input
-            min="1"
-            value={item.amount}
-            max="9"
-            type="number"
+            maxLength={1}
+            disabled={item.amount > 10}
+            type="text"
+            value={productAmount}
             className={styles.amount}
+            onChange={(e) => {
+              setProductAmount(e.target.value);
+            }}
           />
           <button
             onClick={() => dispatch(decreaseAmount(item))}
             className={styles.counter}
+            disabled={item.amount <= 1}
           >
             -
           </button>
-          <div className={styles.price}>{itemPrice}TL</div>
+          <div className={styles["price-container"]}>
+            <div className={styles.price}>{itemPrice}TL</div>
+          </div>
           <div
             className={styles.trash}
             onClick={() => dispatch(removeFromCart(item))}

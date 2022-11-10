@@ -1,6 +1,14 @@
 .container {
   max-width: 1250px;
   margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.cartLink {
+  text-decoration: none;
+  color: blue;
+  cursor: pointer;
+  font-size: 10rem;
 }
 
 .cart-page-container {
@@ -16,7 +24,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  padding-top: 40px;
+  padding-top: 2.5em;
+  padding-bottom: 5em;
 }
 
 /* TOTAL AMOUNT */
