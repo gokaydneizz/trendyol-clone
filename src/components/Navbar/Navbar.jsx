@@ -32,7 +32,7 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faUser} className={styles["list-icon"]} />{" "}
           Hesabım
         </li>
-        <li>
+        <li onClick={() => navigate("/favourites")}>
           <FontAwesomeIcon icon={faHeart} className={styles["list-icon"]} />{" "}
           Favorilerim
         </li>

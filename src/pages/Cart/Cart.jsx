@@ -6,11 +6,16 @@ import DiscountBar from "../../components/DiscountBar/DiscountBar";
 import Footer from "../../components/Footer/Footer";
 import CartItem from "../../components/CartItem/CartItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import {
+  faPlus,
+  faChevronRight,
+  faCartPlus,
+} from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
+  const navigate = useNavigate();
 
   const cartPriceArray = [];
 
@@ -40,13 +45,21 @@ const Cart = () => {
                 Sepetim ({cart.length} Ürün)
               </h1>
             ) : (
-              <Link
-                className={styles.cartLink}
-                to="/"
-                style={{ fontWeight: 400, fontSize: "25px" }}
-              >
-                Sepetinizde hiç ürün yok,ürünlere gitmek için tıklayın.
-              </Link>
+              <div className={styles.cartLink}>
+                <div className={styles.cartDiv}>
+                  <FontAwesomeIcon
+                    icon={faCartPlus}
+                    className={styles["cart-icon"]}
+                  />
+                  <h1>Sepetinizde ürün bulunmamaktadır.</h1>
+                </div>
+                <button
+                  onClick={() => navigate("/")}
+                  className={styles["start-btn"]}
+                >
+                  Alışverişe Başla
+                </button>
+              </div>
             )}
             <div className={styles["carts-container"]}>
               {cart.map((cartItem) => (

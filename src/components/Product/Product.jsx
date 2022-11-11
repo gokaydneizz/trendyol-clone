@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Product.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
@@ -8,7 +8,6 @@ import { addToCart } from "../../redux/cart";
 
 const Product = ({ data }) => {
   const dispatch = useDispatch();
-
   const { img, description, price, seller } = data;
   return (
     <div className={styles["product-card-container"]}>
