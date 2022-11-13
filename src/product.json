@@ -5,7 +5,6 @@
     "seller": "Vans",
     "description": "Kaykay Ayakkabısı",
     "price": 400,
-    "favourite": false,
     "brand": "Vans"
   },
   {
@@ -14,7 +13,6 @@
     "seller": "Trendyol",
     "description": "İçi yünlü mont",
     "price": 900,
-    "favourite": false,
     "brand": "Adidas"
   },
   {
@@ -23,7 +21,6 @@
     "seller": "OXXO",
     "description": "Düğmeli hırka",
     "price": 200,
-    "favourite": false,
     "brand": "Çağan Butik"
   },
   {
@@ -32,7 +29,6 @@
     "seller": "addax",
     "description": "Gökkuşağı renkli düğmeli hırka",
     "price": 300,
-    "favourite": false,
     "brand": "Çağan Butik"
   },
   {
@@ -41,7 +37,6 @@
     "seller": "Apple",
     "description": "Apple Macbook Pro M1 İşlemcili",
     "price": 20000,
-    "favourite": false,
     "brand": "Apple"
   },
   {
@@ -50,7 +45,6 @@
     "seller": "Monster",
     "description": "Monster Notebook 1050 Ti",
     "price": 15000,
-    "favourite": false,
     "brand": "Monster"
   },
   {
@@ -59,7 +53,6 @@
     "seller": "Fakir",
     "description": "Dikey Kablolu Süpürge",
     "price": 1200,
-    "favourite": false,
     "brand": "Fakir"
   },
   {
@@ -68,7 +61,6 @@
     "seller": "Oscar Computer",
     "description": "Windows 10 Pro Lisans Key",
     "price": 2000,
-    "favourite": false,
     "brand": "Microsoft"
   }
 ]

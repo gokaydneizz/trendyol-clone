@@ -1,6 +1,8 @@
 .categories-container {
   overflow: hidden;
   font-weight: 600;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .categories-list {

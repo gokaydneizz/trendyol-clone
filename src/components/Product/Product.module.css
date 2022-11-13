@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(119, 117, 117);
+  border: 1px solid orange;
   cursor: pointer;
 }
 

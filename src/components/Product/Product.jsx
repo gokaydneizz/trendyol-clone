@@ -1,17 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Product.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cart";
+import { favouritesHandler } from "../../redux/favourites";
 
 const Product = ({ data }) => {
   const dispatch = useDispatch();
+
+  const favourites = useSelector((state) => state.favourites);
+
+  const isFavourite = favourites.filter(
+    (favouriteProduct) => favouriteProduct.id === data.id
+  );
+
   const { img, description, price, seller } = data;
+
   return (
     <div className={styles["product-card-container"]}>
-      <div className={styles.favourite}>
+      <div
+        onClick={() => {
+          dispatch(favouritesHandler({ product: data }));
+        }}
+        className={
+          isFavourite.length > 0 ? styles.selectedFavourite : styles.favourite
+        }
+      >
         <FontAwesomeIcon className={styles["favourite-icon"]} icon={faHeart} />
       </div>
       <div className={styles.imgBox}>

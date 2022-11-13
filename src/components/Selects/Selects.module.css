@@ -1,0 +1,71 @@
+.selects-container {
+  display: flex;
+  gap: 20px;
+}
+
+.select-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  transition: border 0.1s;
+}
+.select-icon {
+  background-color: orange;
+  padding: 5px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  color: #fff;
+}
+
+.select-item span {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+/* Orange */
+
+.select-item.orange {
+  border: 2px solid #f27a1a;
+  color: #f27a1a;
+}
+
+.select-icon.orange {
+  background-color: orange;
+}
+
+/* Blue */
+
+.select-item.blue {
+  border: 2px solid #3090e9;
+  color: #3090e9;
+}
+
+.select-icon.blue {
+  background-color: #3090e9;
+}
+
+/* Red */
+
+.select-item.red {
+  border: 2px solid #d0021b;
+  color: #d0021b;
+}
+
+.select-icon.red {
+  background-color: #d0021b;
+}
+
+/* Orangered */
+
+.select-item.orangered {
+  border: 2px solid orangered;
+  color: orangered;
+}
+
+.select-icon.orangered {
+  background-color: orangered;
+}
