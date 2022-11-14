@@ -27,16 +27,29 @@ const Navbar = () => {
         />
         <FontAwesomeIcon icon={faSearch} className={styles["search-icon"]} />
       </div>
-      <ul className={styles.list}>
-        <li>
+      <div className={styles.list}>
+        <div className={`${styles["user-div"]} ${styles["listItem"]}`}>
           <FontAwesomeIcon icon={faUser} className={styles["list-icon"]} />{" "}
-          Hesabım
-        </li>
-        <li onClick={() => navigate("/favourites")}>
+          Giriş Yap
+          <div className={styles.dropdown}>
+            <div className={styles["user-div-dropdown"]}>
+              <button className={styles["login-btn"]}>Giriş Yap</button>
+              <button className={styles["register-btn"]}>Üye Ol</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={styles.listItem}
+          onClick={() => navigate("/favourites")}
+        >
           <FontAwesomeIcon icon={faHeart} className={styles["list-icon"]} />{" "}
           Favorilerim
-        </li>
-        <li onClick={() => navigate("/cart")}>
+        </div>
+        <div
+          className={`${styles["cart-div"]} ${styles.listItem}`}
+          onClick={() => navigate("/cart")}
+        >
           <FontAwesomeIcon
             icon={faCartShopping}
             className={styles["list-icon"]}
@@ -45,8 +58,8 @@ const Navbar = () => {
           <div className={styles["cart-length-container"]}>
             <span className={styles.cartLength}>{cart.length}</span>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
   );
 };

@@ -1,0 +1,44 @@
+.no-fav-container {
+  width: 1200px;
+  height: 396px;
+  border: 1px solid #eaeaea;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 6px;
+}
+
+.heart {
+  background-color: #fef0e5;
+  color: #f27b1b;
+  padding: 25px;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.empty {
+  font-size: 1.1rem;
+  color: #f27b1b;
+}
+
+.start-btn {
+  padding: 1rem 4rem;
+  background-color: #f27b1b;
+  vertical-align: middle;
+  border: none;
+  border: 1px solid #f27b1b;
+  outline: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 1.4rem;
+  border-radius: 6px;
+}
+
+.start-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

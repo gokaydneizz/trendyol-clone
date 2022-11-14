@@ -9,7 +9,7 @@ import {
 import styles from "./Selects.module.css";
 
 const Selects = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState("Orange");
 
   return (
     <div className={styles["selects-container"]}>

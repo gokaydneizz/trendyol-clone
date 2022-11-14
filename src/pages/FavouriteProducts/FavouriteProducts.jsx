@@ -12,6 +12,7 @@ import Categories from "../../components/Categories/Categories";
 import Selects from "../../components/Selects/Selects";
 import Product from "../../components/Product/Product";
 import Footer from "../../components/Footer/Footer";
+import NoFavourite from "../../components/NoFavourite/NoFavourite";
 
 const FavouriteProducts = () => {
   const favourites = useSelector((state) => state.favourites);
@@ -62,11 +63,15 @@ const FavouriteProducts = () => {
 
         <section className={styles["main-content-container"]}>
           <Selects />
-          <div className={styles.productsContainer}>
-            {favourites.map((item) => (
-              <Product data={item} key={item.id} />
-            ))}
-          </div>
+          {favourites.length > 0 ? (
+            <div className={styles.productsContainer}>
+              {favourites.map((item) => (
+                <Product data={item} key={item.id} />
+              ))}
+            </div>
+          ) : (
+            <NoFavourite />
+          )}
         </section>
         <Footer />
       </div>
