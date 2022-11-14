@@ -4,7 +4,7 @@
   border-top: 1px solid #e8e8e8 !important;
   height: 90px;
   margin-bottom: 30px;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .categories-container {
@@ -87,4 +87,12 @@
   margin: 0 auto;
 }
 
-/* selections */
+/* Fav products */
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 3rem;
+  gap: 4rem;
+  padding-bottom: 4rem;
+}

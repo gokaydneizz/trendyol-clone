@@ -9,14 +9,14 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import Categories from "../../components/Categories/Categories";
-import FavProductItems from "../../components/FavouriteProductsItem/FavProductItems";
 import Selects from "../../components/Selects/Selects";
+import Product from "../../components/Product/Product";
+import Footer from "../../components/Footer/Footer";
 
 const FavouriteProducts = () => {
   const favourites = useSelector((state) => state.favourites);
 
   const [selectedCategory, setSelectedCategory] = useState("Favorilerim");
-  console.log(favourites);
 
   useEffect(() => {
     document.title = "Favoriler";
@@ -64,10 +64,11 @@ const FavouriteProducts = () => {
           <Selects />
           <div className={styles.productsContainer}>
             {favourites.map((item) => (
-              <FavProductItems key={item.id} product={item} />
+              <Product data={item} key={item.id} />
             ))}
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );
