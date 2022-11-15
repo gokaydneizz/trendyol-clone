@@ -1,0 +1,100 @@
+.product-container {
+  display: flex;
+  width: 956px;
+  border: solid 1px #e6e6e6;
+  background-color: #fff;
+  box-shadow: 0 1px 4px #0000000d;
+  padding: 20px;
+  margin-top: 4rem;
+  gap: 2rem;
+  height: 700px;
+}
+
+.imgBox {
+  width: 55%;
+  height: 100%;
+  border-radius: 6px;
+  border: solid 1px #e6e6e6;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.imgBox img {
+  width: 100%;
+}
+
+.content-box {
+  width: 55%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.brandText {
+  font-size: 1.2rem;
+}
+
+.brand {
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+.brand:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sellerText {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.seller {
+  color: #66676a;
+}
+
+.brandSpan {
+  color: #4b91e2;
+  cursor: pointer;
+}
+
+.tick {
+  max-width: 15px;
+  cursor: pointer;
+}
+
+.price {
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f27a1a;
+}
+
+.collections {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 20px;
+  align-self: flex-end;
+  font-size: 0.9rem;
+  padding-bottom: 10px;
+}
+
+.bookmark {
+  color: #f27a1a;
+  position: relative;
+  top: 2px;
+}
+
+.line {
+  width: 100%;
+  margin-top: 1rem;
+  height: 1px;
+  background-color: #e6e6e6;
+}

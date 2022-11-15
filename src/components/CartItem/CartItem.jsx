@@ -12,7 +12,7 @@ import {
 } from "../../redux/cart";
 
 const CartItem = ({ item }) => {
-  let { img, brand, description, seller, price } = item;
+  let { thumbnail, brand, description, price } = item;
   const itemPrice = price * item.amount;
   const [productAmount, setProductAmount] = useState(item.amount);
 
@@ -39,7 +39,7 @@ const CartItem = ({ item }) => {
       <div className={styles.sellerDiv}>
         <input type="checkbox" className={styles.checkbox} />
         <div className={styles.sellerText}>Satıcı : </div>
-        <div className={styles.seller}>{seller}</div>
+        <div className={styles.seller}>{brand}</div>
         <FontAwesomeIcon className={styles.arrowIcon} icon={faChevronRight} />
       </div>
       {price > 50 && (
@@ -54,7 +54,7 @@ const CartItem = ({ item }) => {
       <div className={styles["product"]}>
         <div className={styles["product-details"]}>
           <input type="checkbox" className={styles.checkbox} />
-          <img src={img} alt="" />
+          <img src={thumbnail} alt="product-photo" />
           <div className={styles["product-name"]}>
             <span className={styles.brand}>{brand} </span> {description}
           </div>
