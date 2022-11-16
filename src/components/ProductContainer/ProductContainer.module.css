@@ -1,6 +1,6 @@
 .product-container {
   display: flex;
-  width: 956px;
+  width: 1000px;
   border: solid 1px #e6e6e6;
   background-color: #fff;
   box-shadow: 0 1px 4px #0000000d;
@@ -23,6 +23,7 @@
 
 .imgBox img {
   width: 100%;
+  height: 60%;
 }
 
 .content-box {
@@ -84,6 +85,7 @@
   align-self: flex-end;
   font-size: 0.9rem;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .bookmark {
@@ -97,4 +99,69 @@
   margin-top: 1rem;
   height: 1px;
   background-color: #e6e6e6;
+  margin-bottom: 1rem;
+}
+
+.image-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.mini-photo {
+  width: 50px;
+  height: 52px;
+  overflow: hidden;
+  margin-right: 10px;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+}
+
+.button-div {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.cart-btn {
+  flex: 5;
+  padding: 15px 30px;
+  background-color: #f37a1b;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  opacity: 0.9;
+}
+
+.fav-btn {
+  flex: 1;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.fav-btn.selected {
+  background-color: #f27a1e;
+  border: 1px solid #f27a1a;
+  color: #fff;
+}
+
+.heart-icon {
+  height: 25px;
+}
+
+.fav-btn:hover > .heart-icon {
+  color: #f37a1b;
 }

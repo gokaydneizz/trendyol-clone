@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Categories.module.css";
 
-const Categories = () => {
+const Categories = (props) => {
   const [selectedCategory, setSelectedCategory] = useState("KADIN");
 
   const categories = [

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -6,9 +6,8 @@ import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const navigate = useNavigate();
-
   const cart = useSelector((state) => state.cart);
 
   return (
@@ -22,6 +21,7 @@ const Navbar = () => {
       </div>
       <div className={styles.inputBox}>
         <input
+          onChange={(e) => props.setSearch(e.target.value)}
           type="text"
           placeholder="Aradığınız ürün,kategori veya markayı yazınız"
         />

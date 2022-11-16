@@ -3,7 +3,7 @@ import styles from "./Products.module.css";
 import Product from "../Product/Product";
 import { useFetch } from "../../hooks/useFetch";
 
-const Products = () => {
+const Products = ({ search }) => {
   const [products, setProducts] = useState();
 
   const { data, error, loading } = useFetch("https://dummyjson.com/products");
@@ -20,9 +20,15 @@ const Products = () => {
   if (!error && !loading) {
     return (
       <section className={styles["products-container"]}>
-        {products?.map((product) => (
-          <Product key={product.id} data={product} />
-        ))}
+        {products
+          ?.filter(
+            (product) =>
+              product.title.toLowerCase().includes(search.toLowerCase()) ||
+              product.description.toLowerCase().includes(search.toLowerCase())
+          )
+          .map((product) => (
+            <Product key={product.id} data={product} />
+          ))}
       </section>
     );
   }

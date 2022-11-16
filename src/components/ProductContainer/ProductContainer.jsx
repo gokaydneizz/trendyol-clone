@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ProductContainer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../redux/cart";
+import { favouritesHandler } from "../../redux/favourites";
 
 const ProductContainer = ({ product, loading }) => {
+  const [imageSource, setImageSource] = useState(product?.thumbnail);
+
+  const favourites = useSelector((state) => state.favourites);
+
+  const isFavourite = favourites.filter((fav) => fav.id === product?.id);
+
+  const dispatch = useDispatch();
+
   return (
     <section className={styles["product-container"]}>
       <div className={styles.imgBox}>
-        <img src={product?.images[0]} alt="" />
+        <img src={imageSource} alt="" />
       </div>
       <div className={styles["content-box"]}>
         <div className={styles.brandText}>
@@ -29,6 +40,36 @@ const ProductContainer = ({ product, loading }) => {
           Koleksiyona ekle
         </div>
         <div className={styles.line}></div>
+        <div className={styles["other-photos-text"]}>Diğer Fotoğraflar :</div>
+        <div className={styles["image-container"]}>
+          {product?.images.map((src, idx) => (
+            <img
+              src={src}
+              className={styles["mini-photo"]}
+              alt="mini-product"
+              key={idx}
+              onMouseOver={() => setImageSource(src)}
+            />
+          ))}
+        </div>
+        <div className={styles["button-div"]}>
+          <button
+            className={styles["cart-btn"]}
+            onClick={() => dispatch(addToCart(product))}
+          >
+            Sepete Ekle
+          </button>
+          <button
+            className={
+              isFavourite.length > 0
+                ? `${styles["fav-btn"]} ${styles["selected"]}`
+                : styles["fav-btn"]
+            }
+            onClick={() => dispatch(favouritesHandler({ product }))}
+          >
+            <FontAwesomeIcon className={styles["heart-icon"]} icon={faHeart} />{" "}
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -18,6 +18,7 @@ const FavouriteProducts = () => {
   const favourites = useSelector((state) => state.favourites);
 
   const [selectedCategory, setSelectedCategory] = useState("Favorilerim");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     document.title = "Favoriler";
@@ -53,7 +54,11 @@ const FavouriteProducts = () => {
             </div>
           </div>
           <div className={styles.inputBox}>
-            <input type="text" placeholder="Favorilerimde ara" />
+            <input
+              onChange={(e) => setSearch(e.target.value)}
+              type="text"
+              placeholder="Favorilerimde ara"
+            />
             <FontAwesomeIcon
               icon={faSearch}
               className={styles["search-icon"]}
@@ -65,9 +70,15 @@ const FavouriteProducts = () => {
           <Selects />
           {favourites.length > 0 ? (
             <div className={styles.productsContainer}>
-              {favourites.map((item) => (
-                <Product data={item} key={item.id} />
-              ))}
+              {favourites
+                .filter(
+                  (fav) =>
+                    fav.title.toLowerCase().includes(search.toLowerCase()) ||
+                    fav.description.toLowerCase().includes(search)
+                )
+                .map((item) => (
+                  <Product data={item} key={item.id} />
+                ))}
             </div>
           ) : (
             <NoFavourite />

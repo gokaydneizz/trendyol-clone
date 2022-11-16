@@ -21,10 +21,7 @@ const Product = ({ data }) => {
   const { brand, description, price, thumbnail, title, id } = data;
 
   return (
-    <div
-      className={styles["product-card-container"]}
-      onClick={() => navigate(`/product/${id}`)}
-    >
+    <div className={styles["product-card-container"]}>
       <div
         onClick={() => {
           dispatch(favouritesHandler({ product: data }));
@@ -36,7 +33,11 @@ const Product = ({ data }) => {
         <FontAwesomeIcon className={styles["favourite-icon"]} icon={faHeart} />
       </div>
       <div className={styles.imgBox}>
-        <img src={thumbnail} alt="card" />
+        <img
+          onClick={() => navigate(`/product/${id}`)}
+          src={thumbnail}
+          alt="card"
+        />
       </div>
 
       <div className={styles["card-content"]}>
@@ -44,13 +45,6 @@ const Product = ({ data }) => {
           <span className={styles["seller"]}>{brand}</span> {title}
         </p>
         <span className={styles.price}>{price * 10} TL</span>
-        <button
-          className={styles["card-btn"]}
-          onClick={() => dispatch(addToCart(data))}
-        >
-          Sepete Ekle{" "}
-          <FontAwesomeIcon className={styles["card-icon"]} icon={faCartPlus} />
-        </button>
       </div>
     </div>
   );
