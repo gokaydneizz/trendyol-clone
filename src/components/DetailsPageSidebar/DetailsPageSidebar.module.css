@@ -1,0 +1,74 @@
+.sidebar-container {
+  margin-top: 4rem;
+}
+
+.title {
+  color: #000;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.content {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-bottom: 15px;
+  position: relative;
+  transition: color 0.4s;
+}
+
+.content:hover {
+  color: #f37b1a;
+  cursor: pointer;
+}
+
+.contentInner {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 10px;
+  align-self: flex-start;
+  padding-right: 5px;
+  color: #f37b1a;
+  position: relative;
+  top: 3px;
+}
+
+.right-icon {
+  color: #f37b1a;
+}
+
+.brandDiv {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #4378ea;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.brandName:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.brand-icon {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 1px;
+  margin-left: 5px;
+}
+
+.followers {
+  color: gray;
+  font-size: 0.8rem;
+}

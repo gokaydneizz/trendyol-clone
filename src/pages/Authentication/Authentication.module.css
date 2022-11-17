@@ -1,0 +1,43 @@
+.auth-page-container {
+  width: 415px;
+  margin: 0 auto;
+}
+
+.texts {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.texts h1 {
+  font-weight: 200;
+  padding-bottom: 13px;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+  gap: 0.6rem;
+}
+
+.auth-btn {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  background-color: #f3f2f3;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.auth-btn.selected {
+  border-bottom: none;
+  background-color: #fff;
+  color: #f29042;
+}
+
+.form-container {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  padding: 2.5rem;
+}

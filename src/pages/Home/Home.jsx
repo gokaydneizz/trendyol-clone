@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Categories from "../../components/Categories/Categories";
 import DiscountBar from "../../components/DiscountBar/DiscountBar";
-import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Products from "../../components/Products/Products";
 
@@ -15,12 +14,11 @@ const Home = () => {
   return (
     <>
       <DiscountBar />
-      <div className="container">
+      <div>
         <Navbar setSearch={setSearch} />
         <Categories />
         <Products search={search} />
       </div>
-      <Footer />
     </>
   );
 };

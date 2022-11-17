@@ -83,6 +83,7 @@ input::-webkit-inner-spin-button {
 .product-name {
   font-size: 14px;
   font-size: light;
+  cursor: pointer;
 }
 
 .brand {

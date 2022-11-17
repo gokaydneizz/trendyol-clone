@@ -4,4 +4,6 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding-bottom: 3rem;
+  max-width: 1500px;
+  margin: 0 auto;
 }

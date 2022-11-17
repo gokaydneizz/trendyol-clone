@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import Categories from "../Categories/Categories";
+import DetailsPageSiderbar from "../DetailsPageSidebar/DetailsPageSiderbar";
 import Navbar from "../Navbar/Navbar";
 import ProductContainer from "../ProductContainer/ProductContainer";
 import styles from "./ProductDetails.module.css";
@@ -9,7 +10,7 @@ import styles from "./ProductDetails.module.css";
 const ProductDetails = () => {
   const productId = useLocation().pathname.split("/")[2];
 
-  const { data, loading, error } = useFetch(
+  const { data, loading } = useFetch(
     `https://dummyjson.com/products/${productId}`
   );
 
@@ -21,6 +22,7 @@ const ProductDetails = () => {
       {!loading && (
         <main className={styles["main-page-container"]}>
           <ProductContainer product={data} />
+          <DetailsPageSiderbar brandName={data?.brand} />
         </main>
       )}
       {loading && <h1>Loading....</h1>}

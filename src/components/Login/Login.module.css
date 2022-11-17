@@ -1,0 +1,89 @@
+label {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.input-box {
+  width: 100%;
+  background-color: #f3f2f3;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #f3f2f3;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.forgot-password {
+  text-align: right;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+  cursor: pointer;
+  color: #f27a1a;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px 8px;
+  margin-top: 1rem;
+  background-color: #f27a1a;
+  color: #fff;
+  border: 1px solid #f27a1a;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.social-buttons {
+  display: flex;
+  font-size: 13px;
+  margin-top: 20px;
+  width: 100%;
+  gap: 25px;
+}
+
+.social-btn {
+  display: flex;
+  border: 1px solid #e6e6e6;
+  gap: 10px;
+  padding: 5px 5px;
+  width: 50%;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+
+.social-btn:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.social-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-text {
+  color: gray;
+}

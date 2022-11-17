@@ -2,8 +2,9 @@ footer {
   width: 100%;
   background-color: black;
   color: #fff;
-  padding: 2.5rem 0;
   font-size: 13px;
+  padding-top: 4rem;
+  height: 600px;
 }
 
 .lists {

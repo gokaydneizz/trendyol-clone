@@ -27,7 +27,9 @@ const ProductContainer = ({ product, loading }) => {
         </div>
         <div className={styles.sellerText}>
           <span className={styles.seller}>Satıcı : </span>
-          <span className={styles.brandSpan}>{product?.brand}</span>
+          <span className={styles.brandSpan} style={{ paddingRight: "3px" }}>
+            {product?.brand}
+          </span>
           <img
             src="https://cdn.dsmcdn.com/indexing-sticker-stamp/stage/4b0d7ef1-8e8f-4c8f-b1c7-637e432ea2b4.png"
             alt="tick"
@@ -70,6 +72,22 @@ const ProductContainer = ({ product, loading }) => {
             <FontAwesomeIcon className={styles["heart-icon"]} icon={faHeart} />{" "}
           </button>
         </div>
+        <div
+          className={styles["other-photos-text"]}
+          style={{ marginTop: "20px" }}
+        >
+          Öne Çıkan Bilgiler :
+        </div>
+        <ul className={styles.list}>
+          <li>
+            15 gün içinde ücretsiz iade.Detaylı bilgi için{" "}
+            <span className={styles.clickText}>tıklayın</span>.
+          </li>
+          <li>
+            Bu ürün <span className={styles.brandName}> {product?.brand}</span>
+            tarafından gönderilecektir. .
+          </li>
+        </ul>
       </div>
     </section>
   );

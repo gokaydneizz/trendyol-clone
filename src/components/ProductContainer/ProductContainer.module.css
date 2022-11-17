@@ -23,7 +23,8 @@
 
 .imgBox img {
   width: 100%;
-  height: 60%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .content-box {
@@ -86,6 +87,10 @@
   font-size: 0.9rem;
   padding-bottom: 10px;
   cursor: pointer;
+}
+
+.collections:hover {
+  color: #f27a1e;
 }
 
 .bookmark {
@@ -164,4 +169,35 @@
 
 .fav-btn:hover > .heart-icon {
   color: #f37a1b;
+}
+
+.list {
+  margin-top: 10px;
+  list-style: none;
+  font-size: 0.8rem;
+}
+
+.list li::before {
+  content: "\2022";
+  color: gray;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
+.list li {
+  margin-bottom: 6px;
+}
+
+.clickText {
+  text-decoration: underline;
+  color: gray;
+  cursor: pointer;
+}
+
+.brandName {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  padding: 0 3px;
 }

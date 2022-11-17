@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -10,25 +10,37 @@ const Navbar = (props) => {
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
 
+  const searchHandler = (e) => {
+    if (!props.setSearch) {
+      return;
+    } else {
+      props.setSearch(e.target.value);
+    }
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.imgBox}>
         <img
           onClick={() => navigate("/")}
+          alt="logo"
           src="https://cdn.dsmcdn.com/web/logo/ty-web.svg"
           className="brand"
         />
       </div>
       <div className={styles.inputBox}>
         <input
-          onChange={(e) => props.setSearch(e.target.value)}
+          onChange={searchHandler}
           type="text"
           placeholder="Aradığınız ürün,kategori veya markayı yazınız"
         />
         <FontAwesomeIcon icon={faSearch} className={styles["search-icon"]} />
       </div>
       <div className={styles.list}>
-        <div className={`${styles["user-div"]} ${styles["listItem"]}`}>
+        <div
+          onClick={() => navigate("/auth")}
+          className={`${styles["user-div"]} ${styles["listItem"]}`}
+        >
           <FontAwesomeIcon icon={faUser} className={styles["list-icon"]} />{" "}
           Giriş Yap
           <div className={styles.dropdown}>

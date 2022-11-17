@@ -12,3 +12,7 @@ body {
   max-width: 1250px;
   margin: 0 auto;
 }
+
+.container.home {
+  height: 100%;
+}

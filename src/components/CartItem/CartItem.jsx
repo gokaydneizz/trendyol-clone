@@ -10,11 +10,16 @@ import {
   removeFromCart,
   increaseByAmount,
 } from "../../redux/cart";
+import { useNavigate } from "react-router-dom";
 
 const CartItem = ({ item }) => {
-  let { thumbnail, brand, description, price } = item;
-  const itemPrice = price * item.amount;
   const [productAmount, setProductAmount] = useState(item.amount);
+
+  let { thumbnail, brand, description, price } = item;
+
+  const itemPrice = price * item.amount;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(
@@ -54,8 +59,15 @@ const CartItem = ({ item }) => {
       <div className={styles["product"]}>
         <div className={styles["product-details"]}>
           <input type="checkbox" className={styles.checkbox} />
-          <img src={thumbnail} alt="product-photo" />
-          <div className={styles["product-name"]}>
+          <img
+            onClick={() => navigate(`/product/${item.id}`)}
+            src={thumbnail}
+            alt="product"
+          />
+          <div
+            className={styles["product-name"]}
+            onClick={() => navigate(`/product/${item.id}`)}
+          >
             <span className={styles.brand}>{brand} </span> {description}
           </div>
         </div>
