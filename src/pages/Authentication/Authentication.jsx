@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Categories from "../../components/Categories/Categories";
+import Footer from "../../components/Footer/Footer";
 import Login from "../../components/Login/Login";
 import Navbar from "../../components/Navbar/Navbar";
 import Register from "../../components/Register/Register";
@@ -43,6 +44,7 @@ const Authentication = () => {
           {selectedBtn === "Login" ? <Login /> : <Register />}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -6,6 +6,10 @@ import FavouriteProducts from "./pages/FavouriteProducts/FavouriteProducts";
 import Home from "./pages/Home/Home";
 
 function App() {
+  const user = localStorage.getItem("user");
+
+  console.log(user);
+
   return (
     <div className="App">
       <BrowserRouter>

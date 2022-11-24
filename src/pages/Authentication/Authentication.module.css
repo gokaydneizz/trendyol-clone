@@ -22,11 +22,12 @@
 
 .auth-btn {
   width: 50%;
-  padding: 20px;
+  height: 50px;
   border: 1px solid #e6e6e6;
   background-color: #f3f2f3;
   font-size: 1.1rem;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .auth-btn.selected {
@@ -40,4 +41,5 @@
   border: 1px solid #e6e6e6;
   border-top: none;
   padding: 2.5rem;
+  margin-bottom: 30px;
 }

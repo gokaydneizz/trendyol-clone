@@ -14,7 +14,6 @@ const ProductDetails = () => {
     `https://dummyjson.com/products/${productId}`
   );
 
-  console.log(data);
   return (
     <div className="container">
       <Navbar />

@@ -6,6 +6,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import cartReducer from "./redux/cart";
 import favouritesReducer from "./redux/favourites";
+import { UserContextProvider } from "./context/UserContext";
 
 const store = configureStore({
   reducer: {
@@ -17,8 +18,10 @@ const store = configureStore({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <UserContextProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </UserContextProvider>
   </React.StrictMode>
 );

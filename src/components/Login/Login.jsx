@@ -1,18 +1,60 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./Login.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
+import { UserContext } from "../../context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const { user, setUser } = useContext(UserContext);
+
+  const navigator = useNavigate();
+
+  useEffect(() => {
+    setUser({ email: email, password: password });
+  }, [email, password]);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    localStorage.setItem("user", JSON.stringify(user));
+    setTimeout(() => {
+      navigator("/");
+    }, 2000);
+  };
+
+  const userLocalStorage = localStorage.getItem("user");
+  useEffect(() => {
+    if (userLocalStorage) {
+      navigator("/");
+    }
+  }, []);
+
   return (
     <>
-      <form>
+      <form onSubmit={submitHandler}>
         <div className={styles["form-item"]}>
           <label>E-Posta</label>
           <div className={styles["input-box"]}>
-            <input type="text" />
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <label>Şifre</label>
           <div className={styles["input-box"]}>
-            <input type="text" />
+            <input
+              type={showPassword ? "text" : "password"}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <FontAwesomeIcon
+              onClick={() => setShowPassword((show) => !show)}
+              style={{ cursor: "pointer" }}
+              icon={showPassword ? faEye : faEyeSlash}
+            />
           </div>
           <div className={styles["forgot-password"]}>Şifremi Unuttum</div>
           <button className={styles["submit-btn"]}>Giriş Yap</button>
